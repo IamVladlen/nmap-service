@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nmap-service
+    env_file:
+      - .env
+    ports:
+      - 9001:9001
